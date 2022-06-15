@@ -6,9 +6,11 @@
  */
 function calculator() {
   const arr = process.argv;
+
   if (arr.length <= 2) {
     return 'No operation provided...';
   }
+
   if (arr[2] === 'plus' || arr[2] === 'minus') {
     if (arr.length <= 3) {
       return 'No numbers provided...';
@@ -26,16 +28,14 @@ function calculator() {
   if (arr[2] === 'plus') {
     let sum = 0;
     for (let i = 3; i < arr.length; i++) {
-      let result = parseInt(arr[i]); //should turn string "5" into 5
+      let result = parseInt(arr[i]);
       sum += result;
     }
     return sum;
-  } else {
-  }
-  if (arr[2] === 'minus') {
+  } else if (arr[2] === 'minus') {
     let sum = arr[3];
     for (let i = 4; i < arr.length; i++) {
-      let result = parseInt(arr[i]); //should turn string "5" into 5
+      let result = parseInt(arr[i]);
       sum -= result;
     }
     return sum;
